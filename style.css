@@ -10,7 +10,7 @@ body{
     background: yellow;
     width: 700px;
     height: 300px;
-    margin: 50px auto;
+    margin: 2rem auto;
 }
 
 #primary-number, #secondary-number{
@@ -53,3 +53,28 @@ button{
     border: 1px solid lightgrey;
 }
 
+#new-game {
+    background: green;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+#message {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: purple;
+    border-radius: 6px;
+    padding: 2rem;
+    width: 30%;
+    max-width: 20rem;
+    margin-top: 2rem;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
