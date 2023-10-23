@@ -16,12 +16,11 @@ secondNumberNode.textContent = secondNumber;
 const buttonCheckNode = document.querySelector('#btn');
 const buttonNewGameNode = document.querySelector('#new-game');
 const messageNode = document.querySelector('#message');
-
+const userInput = document.querySelector('#guess');
 buttonCheckNode.addEventListener('click', () => {
-    const userInput = document.querySelector('#guess').value;
-    if (total === parseInt(userInput)) {
+    if (total === +userInput.value) {
         messageNode.textContent = 'La suma es correcta! :)'
-    } else if (userInput === '') {
+    } else if (userInput.value === '') {
         messageNode.textContent = 'Please enter a number'
     } else {
         messageNode.textContent = 'La suma es incorrecta... :('
@@ -29,7 +28,8 @@ buttonCheckNode.addEventListener('click', () => {
 })
 
 buttonNewGameNode.addEventListener('click', () => {
-    location.reload()
+    userInput.value = '';
+    messageNode.textContent = 'Please enter a number';
 })
 
 
