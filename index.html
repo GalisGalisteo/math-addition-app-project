@@ -10,28 +10,31 @@
 </head>
 
 <body>
-    <div class="intro">
-        <div id="message">
-            ¿Cuánto suma?
+    <div id="app">
+        <div class="intro">
+            <div id="message">
+                {{ message }}
+            </div>
+            <div>
+                <button @click="reset" id="new-game">new game</button>
+            </div>
         </div>
-        <div>
-            <button id="new-game">new game</button>
-        </div>
-    </div>
-    <div id="canvas">
-        <div id="primary-number"></div>
-        <div id="add">+</div>
-        <div id="secondary-number"> </div>
-        <div id="equal">=</div>
-        <div>
-            <input type="number" id="guess">
-        </div>
-        <div>
-            <button id="btn">check</button>
+        <div id="canvas">
+            <div id="primary-number"> {{ firstNumber }} </div>
+            <div id="add">+</div>
+            <div id="secondary-number"> {{ secondNumber }} </div>
+            <div id="equal">=</div>
+            <div>
+                <input v-model="userInput" type="number" id="guess">
+            </div>
+            <div>
+                <button @click="isCorrect" id="btn">check</button>
+            </div>
+
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chance"></script>
-    <script src="app.js"></script>
+    <script type="module" src="app-vue.js"></script>
 </body>
 
 </html>
